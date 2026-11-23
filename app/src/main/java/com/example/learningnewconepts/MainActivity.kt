@@ -11,7 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.learningnewconepts.Screens.SharePref
 import com.example.learningnewconepts.Screens.TestingScreen
+import com.example.learningnewconepts.ViewModels.Sharedprefviewmodel
 import com.example.learningnewconepts.ui.theme.LearningNewConeptsTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +23,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LearningNewConeptsTheme {
-                TestingScreen()
+                val viewmodel: Sharedprefviewmodel= viewModel{
+                    Sharedprefviewmodel(application)
+                }
+                SharePref(viewmodel)
             }
         }
     }
