@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.learningnewconepts.Screens.IntentsScreen
 import com.example.learningnewconepts.Screens.SharePref
 import com.example.learningnewconepts.Screens.TestingScreen
 import com.example.learningnewconepts.ViewModels.Sharedprefviewmodel
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 val viewmodel: Sharedprefviewmodel= viewModel{
                     Sharedprefviewmodel(application)
                 }
-                SharePref(viewmodel)
+                IntentsScreen()
             }
         }
     }
